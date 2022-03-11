@@ -92,31 +92,21 @@ function App() {
             </div>
           </Tab>
 
-
-   
           <Tab label="Museums">
-
-
-
-<div>
-  <a href="https://example.com" target="_blank">
-    <div class="bar">
-      <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-      <div class="text"><b>Title</b>Description.</div>
-    </div>
-  </a>
-</div>
+            <div>
+              <a href="https://example.com" target="_blank">
+                <div class="bar">
+                  <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                  <div class="text"><b>Title</b>Description.</div>
+                </div>
+              </a>
+            </div>
           </Tab>
       </Tabs>
       </div>
-
     </div>
-    
   );
 } 
-
-
-
 
 const HomePageHeader = () => {
   return ( 
