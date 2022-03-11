@@ -1,0 +1,29 @@
+[
+    {   "id": "1",
+        "address": "12 E 23rd St, New York , NY"
+    },
+    {   "id": "2",
+        "name": "Port Authority",
+        "address": "8th Acw btwn 42nd St & 43rd, in front of...",
+        "secondName": "Times Square West",
+        "secondAddress": "46th St btwn 7th Ave & 8th Ave, in front of..." 
+    },
+    {
+        "id": "3",
+        "name": "Times Square",
+        "secondName": "Times Square Building"
+    },
+    {   "id": "4",
+        "name": "Central Park",
+        "secondName": "Metropolitan Museum"
+    },
+    {
+        "id": "5",
+        "museum": [
+        { 
+            "name": "Metropolitan Museum",
+            "secondName": "Brooklyn Museum" 
+        }
+        ]   
+    }
+]
