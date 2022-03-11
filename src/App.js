@@ -40,6 +40,7 @@ function App() {
         })}
       </div> */}
 
+
     {/* работещ за record.json  */}
       {
          Record.map( record => {
@@ -67,7 +68,7 @@ function App() {
 
     <div class="">
       <Tabs>
-        <Tab label="Bus">b</Tab>
+        <Tab label="Bus">test</Tab>
         <Tab label="Attractions">
           <div class="container">
             <div class="row">
