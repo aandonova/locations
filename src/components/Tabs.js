@@ -1,32 +1,38 @@
-import React, { useState } from 'react';
+import React, { Component } from "react";
+import "./tabs.css";
 
-const Tabs = ({ children }) => {
-  const [selected, setSelected] = useState(Array(children.length).fill(false));
 
-  const updateSelected = (index) => {
-    const state = [...selected];
-    state[index] = !state[index];
-    setSelected(state);
+export default class Tabs extends Component {
+  state = {
+    selected: 0
   };
-
-  return (
-    <>
-      {React.Children.map(children, (kids, index) => (
-        <button
-          className="tab-label"
-          onClick={() => updateSelected(index)}
-          data-active={selected[index]}
-        >
-          {kids.props.label}
-        </button>
-      ))}
-      {React.Children.map(children, (kids, index) => (
-        <div className="tab-content" data-active={selected[index]}>
-          {kids}
-        </div>
-      ))}
-    </>
-  );
-};
-
-export default Tabs;
+  updateSelected(index) {
+    this.setState({
+      selected: index
+    });
+  }
+  renderLabel = () =>
+    React.Children.map(this.props.children, (kids, index) => (
+      <button
+        className="tab-label"
+        onClick={() => this.updateSelected(index)}
+        data-active={this.state.selected === index}
+      >
+        {kids.props.label}
+      </button>
+    ));
+  renderContent = () =>
+    React.Children.map(this.props.children, (kids, index) => (
+      <div className="tab-content" data-active={this.state.selected === index}>
+        {kids}
+      </div>
+    ));
+  render() {
+    return (
+      <div className="tabs">
+        {this.renderLabel()}
+        {this.renderContent()}
+      </div>
+    );
+  }
+}
