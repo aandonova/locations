@@ -53,7 +53,7 @@
   color: #10375c;
 }
 
-table {
+/* table {
   display: flex;
   justify-content: center;
   border: 1px solid gray;
@@ -61,4 +61,13 @@ table {
 td {
   border: 1px solid gray;
   width: 30em;
+} */
+
+input {
+  width: 250pt;
+  height: 36pt;
+}
+i.fa-arrow {
+  width: 14.3pt;
+  height: 12.7pt;
 }

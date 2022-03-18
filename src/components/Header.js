@@ -30,13 +30,16 @@ const Header = () => {
 
         <header className="header">
         <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-location-dot"></i> - 
+        <i class="fa-solid fa-ellipsis-vertical"></i> 
+        <i class="fa-solid fa-circle-plus"></i> 
          </header>
 
 
       {inputList.map((x, i) => {
         return (
+        <div class="wrapper">
           <div className="box">
-              
             <input
               name="location"
               placeholder="Current Location"
@@ -44,12 +47,15 @@ const Header = () => {
               onChange={e => handleInputChange(e, i)}
             />
             <div className="btn-box">
-              {/* {inputList.length !== 1 && <button
+              {inputList.length !== 1 && <button
                 className="mr10"
-                onClick={() => handleRemoveClick(i)}>Remove</button>} */}
-              {inputList.length - 1 === i && <button onClick={handleAddClick}>Add destination</button>}
+                onClick={() => handleRemoveClick(i)}><i class="fa-solid fa-circle-xmark"></i></button>}
+              {inputList.length - 1 === i &&
+              
+              <button onClick={handleAddClick}>Add destination</button>}
             </div>
           </div>
+        </div>
         );
       })}
       {/* <div style={{ marginTop: 20 }}>{JSON.stringify(inputList)}</div> */}
