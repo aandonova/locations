@@ -9,7 +9,6 @@ import Tabs from "./components/Tabs";
 import Tab from "./components/Tab";
 
 
-
 function App() {
   return (
     <div className="App">
@@ -42,7 +41,7 @@ function App() {
 
 
     {/* работещ за record.json  */}
-      {
+      {/* {
          Record.map( record => {
           return ( 
             <div className="box" key={record.id}>
@@ -60,51 +59,116 @@ function App() {
             </div>
           )
         })
-      } 
+      }  */}
 {/* край на работещия */}
 
-      <Stocks />
+      {/* <Stocks /> */}
    
-
-    <div class="">
       <Tabs>
-        <Tab label="Bus">test</Tab>
-        <Tab label="Attractions">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-              <i class="fas fa-pin"></i>
-                <span class="pull-left">Times Square</span>
-                <p> 12 E 23rd St, New York , NY</p>   
-                <i class="fa-solid fa-location-dot"></i>      
-              </div>
-            </div>
-          </div>
-          </Tab>
-          <Tab label="Parks">
-          <div class="main">
-            <div class="iconbox">
-              <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-              <div class="detail">
-                <h3>Central Park</h3>
-                <p>12 E 23rd St, New York , NY</p>
-              </div>
-            </div>
-            </div>
-          </Tab>
+{/* start tab bus */}
+        <Tab label="Bus">
+          <div className="list">
 
-          <Tab label="Museums">
-            <div>
-              <a href="https://example.com" target="_blank">
-                <div class="bar">
-                  <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                  <div class="text"><b>Title</b>Description.</div>
-                </div>
-              </a>
+            <div className="item">
+              <div className="icon"><i className="fa-solid fa-bus"></i></div>
+              <div className="title">
+                <span className="circle">17</span>
+                
+                Port Authority
+              </div>
+              <div className="address bus">8th Acw btwn 42nd St & 43rd, in front of..
+     
+                <div className="row">
+                  <div className="col-md-3">
+                    <div className="tour">
+                      <button type="button" className="btn btn-sm btn-tour-1">Downtown Tour </button>
+                      <button type="button" className="btn btn-sm btn-tour-2">Brooklyn Tour</button>
+                      </div>
+                    </div>  
+                  </div>
+                  <div className="row">
+                    <div className="col-md-3">
+                      <div className="tour">
+                        <button type="button" className="btn btn-sm btn-tour-3">Uptown & Harlem Tour </button>
+                        <button type="button" className="btn btn-sm btn-tour-4">Night Tour</button>
+                        </div>
+                      </div>  
+                  </div>
+              </div>  
             </div>
-          </Tab>
+
+            <div className="item">
+                <div className="icon"><i class="fa-solid fa-bus"></i></div>
+                <div className="title">
+                  <span className="circle-3">3</span>
+                  Times Square West</div>
+                <div className="address bus">46th St btwn 7th Ave & 8th Ave, in front of...
+                  
+                  <div className="tour second">
+                    <button type="button" className="btn btn-sm btn-tour-1">Downtown Tour </button>
+                    <button type="button" className="btn btn-sm btn-tour-3">Uptown & Harlem Tour </button>               
+                  </div>           
+                </div>
+              </div>
+
+          </div>    
+        </Tab>
+{/* end tab bus */}
+
+        <Tab label="Attractions">
+          <div className="list">
+
+            <div className="item">
+              <div className="icon"><i class="fa-solid fa-camera"></i></div>
+              <div className="title">Times Square</div>
+              <div className="address">12 E 23rd St, New York</div>
+            </div>
+
+            <div className="item">
+              <div className="icon"><i class="fa-solid fa-camera"></i></div>
+              <div className="title">Times Square Building</div>
+              <div className="address">12 E 23rd St, New York , NY</div>
+            </div>
+
+          </div>
+        </Tab>
+
+        <Tab label="Parks">
+          <div className="list">
+
+            <div className="item">
+              <div className="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div className="title">Central Park</div>
+              <div className="address">12 E 23rd St, New York , NY</div>
+            </div>
+
+            <div className="item">
+              <div className="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div className="title">Battery Park</div>
+              <div className="address">12 E 23rd St, New York , NY</div>
+            </div>
+
+          </div>
+        </Tab>
+
+        <Tab label="Museums">
+          <div className="list">
+
+            <div className="item">
+              <div className="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div className="title">Metropolitan Museum</div>
+              <div className="address">12 E 23rd St, New York , NY</div>
+            </div>
+
+            <div className="item">
+              <div className="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div className="title">Brooklyn Museum</div>
+              <div className="address">12 E 23rd St, New York , NY</div>
+            </div>
+
+          </div>
+        </Tab>
       </Tabs>
-      </div>
     </div>
   );
 } 
@@ -112,7 +176,7 @@ function App() {
 const HomePageHeader = () => {
   return ( 
     <header className="header">
-      <h2>Your Stock Tracker</h2>
+      <div className="float-left"> <i class="fa-solid fa-arrow-left"></i></div>
     </header>
   );
 };

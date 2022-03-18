@@ -1,130 +1,121 @@
-.tabs {
-   
-}
-
 .tab-label {
-    margin: 0.5rem;
-    display: inline-block;
-    /* cursor: pointer; */
-    background-color: #F5F5F5;
-    border-radius: 10px;
-    width: 100px;
-    height: 30px;
-    color: #5A5A5A;
-    border: none;
-  }
-  .tab-label:hover {
-    background-color: #F5F5F5;
-  }
-  .tab-label:focus {
-    box-shadow: none;
-  }
-  .tab-label[data-active="true"] {
-    background-color: #484848;
-    color: #BFBFBF;
-  }
-  .tab-content {
-    padding: 1.5rem 1rem;
-    border-top: 7px solid #F5F5F5;
-    background-color: white;
-  }
-  .tab-content:not([data-active="true"]) {
-    display: none;
-  }
-  
-.child-content {
-    display: flex;
-    align-items: center;
-
+  margin: 0.5rem;
+  display: inline-block;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  color: #5A5A5A;
+  border: none;
+}
+.tab-label:hover {
+  background-color: #F5F5F5;
+}
+.tab-label:focus {
+  box-shadow: none;
+}
+.tab-label[data-active="true"] {
+  background-color: #484848;
+  color: #BFBFBF;
+}
+.tab-content {
+  padding: 0.1rem 0.2rem;
+  /* padding: 1.5rem 1rem; */
+  /* border-top: 5px solid #F5F5F5; */
+  background-color: white;
+}
+.tab-content:not([data-active="true"]) {
+  display: none;
+}
+ 
+.item {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-columns: 40px 1fr;
+  /* gap: 5px 20px; */
+  margin: 1rem;
 }
 
-
-  @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-    .tab-label { 
-        width: 86px;
-        height: 30px;
-    } 
-
+.icon {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  color: #484848;  
+}
+ 
+.icon .fa-solid {
+  vertical-align: -webkit-baseline-middle;
+  font-size:20px;
 }
 
- i {
-      width: 24px;
-      height: 30px;
-  }
-
-  .main {
-    display: flex;
-  }
-  
-  .iconbox {
-    display: flex;
-    align-items: center;
-    background-color: #f5f5f5;
-  }
-  
-  .icon {
-    margin-right: 10px;
-    /* border: 1px solid red; */
-    /* font-size: 42px; */
-
-    height: 19.47pt;
-    width: 13.32pt;
-    display: grid;
-    place-content: center;
-    color: #484848;
-  }
-  
-  h3 {
-    margin: 0;
-    font-family: 'Open Sans, Semibold', sans-serif; 
-    font-weight: 'Semibold'; 
-    font-size: 15pt;
-    line-height: 20px; 
-    margin-bottom:-15px; 
-    color: #484848;
-    padding: 0;  
-  }
-  
-  p {
-    margin: 5px 0 0;
-  }
-
-
-
-
- .blurb-content {
-    display:flex;
-    flex-direction:column;
-    width: 316px;
-    padding-left: 5px; 
-    
+.title {
+  text-align: left;
+  font-family: 'Open Sans, Semibold', sans-serif; 
+  font-weight: 'Semibold'; 
+  font-size: 15pt;
+  color: #484848;
+  padding: 0;
+  gap: 5px 20px;
 }
 
+.address {
+  text-align: left;
+  color: #48525B;
+  font-family: "Open Sans",sans-serif;
+  font-size: 12.5pt;
+  line-height: 20px;
+  border-bottom: 5px solid #F5F5F5;
+} 
+.address.bus {
+  margin-left: 30px;
+}   
 
-  .blurb-content p.title {
-   font-family: 'Open Sans, Semibold', sans-serif;  
-   font-size: 15pt;
-   line-spacing: 20px; 
-   margin-bottom:-15px; 
-   color: #484848;
-   padding: 0;
-    margin: 0; 
+.circle {
+  width: 0;
+  padding-top: 0;
+  border-style: solid;
+  border-width: 15px;
+  border-color: #E81515 #1AA0D8 #AB66C7 #016F74;
+  border-radius: 100%;
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  height: 23pt;
+}
 
-  }
-  .blurb-content p {
-    color: #48525B;
-    font-family: "Open Sans",sans-serif;
-    font-size: 12.5pt;
-    line-height: 20px;
-    letter-spacing: 0;}
+.circle-3 {
+  width: 0;
+  padding-top: 0;
+  border-style: solid;
+  border-width: 15px;
+  border-color: #E81515 #1AA0D8;
+  border-radius: 100%;
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  height: 23pt;
+}
 
+.tour .btn {
+  /* width: 130px; */
+  border-radius: 20px;
+  font-size: 1em;
+  color: #fff;
+  padding: 5px;
+  margin: 3px;
+}
 
-
-
-    
-
-
-    
+.btn.btn-tour-1 {
+  background-color: #E81515;
+}
+.btn.btn-tour-2 {
+  background-color: #016F74;
+}
+.btn.btn-tour-3 {
+  background-color: #1AA0D8;
+}
+.btn.btn-tour-4 {
+  background-color: #AB66C7;
+}
+.tour.second button {
+  display: block;
+}
