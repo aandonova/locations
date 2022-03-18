@@ -7,12 +7,12 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Tabs from "./components/Tabs";
 import Tab from "./components/Tab";
-
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-        <HomePageHeader />
+        <Header />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -173,12 +173,5 @@ function App() {
   );
 } 
 
-const HomePageHeader = () => {
-  return ( 
-    <header className="header">
-      <div className="float-left"> <i class="fa-solid fa-arrow-left"></i></div>
-    </header>
-  );
-};
 
 export default App;
