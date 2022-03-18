@@ -29,10 +29,10 @@ const Header = () => {
     <div className="App">
 
         <header className="header">
-        <i class="fa-solid fa-arrow-left"></i>
-        <i class="fa-solid fa-location-dot"></i> - 
-        <i class="fa-solid fa-ellipsis-vertical"></i> 
-        <i class="fa-solid fa-circle-plus"></i> 
+       
+        
+        
+        
          </header>
 
 
@@ -40,6 +40,11 @@ const Header = () => {
         return (
         <div class="wrapper">
           <div className="box">
+            <div className="icons">
+                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i> 
+            </div>
             <input
               name="location"
               placeholder="Current Location"
@@ -50,9 +55,10 @@ const Header = () => {
               {inputList.length !== 1 && <button
                 className="mr10"
                 onClick={() => handleRemoveClick(i)}><i class="fa-solid fa-circle-xmark"></i></button>}
+                <i class="fa-solid fa-circle-plus"></i> 
               {inputList.length - 1 === i &&
-              
-              <button onClick={handleAddClick}>Add destination</button>}
+  
+              <button onClick={handleAddClick}> Add destination</button>}
             </div>
           </div>
         </div>
