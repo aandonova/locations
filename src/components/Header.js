@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 
 const Header = () => {
-    const [inputList, setInputList] = useState([{ location: "" }]);
+  const [inputList, setInputList] = useState([{ location: "" }]);
 
-    // handle input change
+  // handle input change
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
     const list = [...inputList];
@@ -25,61 +25,49 @@ const Header = () => {
   };
 
   return (
-   
     <div className="App">
+      {/* <header className="header"></header> */}
 
-        <header className="header">
-       
-
-        
-         </header>
-
-
-      {inputList.map((x, i) => {
-        return (
-        <div class="wrapper">
-          <div className="box">
-            <div>
-              <i class="fa-solid fa-arrow-left"></i>
-              <div className="icons">
-                <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-                <i class="fa-solid fa-location-dot"></i>
-
-              </div>
-              
+      <div className="wrapper">
+        <div className="header-box">
+          <i className="icon icon-back fa-solid fa-arrow-left"></i>
+          <div class="box-content">
+            <div className="box-row">
+              <i class="line"></i>
+              <i className="icon fa-solid fa-circle"></i>
               <input
-                class="input-field"
+                className="input-field"
                 name="location"
                 placeholder="Current Location"
-                value={x.location}
-                onChange={e => handleInputChange(e, i)}
               />
-              <input
-                class="input-field"
-                name="location"
-                placeholder="Choise destination"
-                value={x.location}
-                onChange={e => handleInputChange(e, i)}
-              />
-             
+              <i class="fa-solid fa-light-switch"></i>
             </div>
-            <div className="btn-box">
-              {inputList.length !== 1 && <button
-                className="mr10"
-                onClick={() => handleRemoveClick(i)}><i class="fa-solid fa-circle-xmark"></i></button>}
-                <i class="fa-solid fa-circle-plus"></i> 
-              {inputList.length - 1 === i &&
-                
-              <button onClick={handleAddClick} class="input-field">
-                
-                 Add destination</button>}
+
+            {inputList.map((x, i) => 
+              <div className="box-row">
+                <i class="line"></i>
+                <i className="icon fa-solid fa-location-dot"></i>
+                <input
+                  className="input-field"
+                  name="location"
+                  placeholder="Choise destination"
+                />
+                <button type="button" className="input-field close" onClick={() => handleRemoveClick(i)}>
+                <i class="far fa-times-circle"></i>
+                </button>
+              </div>
+            )}
+
+            <div className="box-row">
+              <i class="icon fas fa-plus-circle"></i>
+              <button onClick={handleAddClick} className="input-field">
+                Add destination</button>
             </div>
-           
           </div>
+
+
         </div>
-        );
-      })}
+      </div>
       {/* <div style={{ marginTop: 20 }}>{JSON.stringify(inputList)}</div> */}
     </div>
   );

@@ -20,8 +20,6 @@
 }
 .tab-content {
   padding: 0.1rem 0.2rem;
-  /* padding: 1.5rem 1rem; */
-  /* border-top: 5px solid #F5F5F5; */
   background-color: white;
 }
 .tab-content:not([data-active="true"]) {
@@ -30,9 +28,7 @@
  
 .item {
   display: grid;
-  /* grid-template-rows: 1fr 1fr; */
   grid-template-columns: 40px 1fr;
-  /* gap: 5px 20px; */
   margin: 1rem;
 }
 
@@ -96,7 +92,6 @@
 }
 
 .tour .btn {
-  /* width: 130px; */
   border-radius: 20px;
   font-size: 1em;
   color: #fff;

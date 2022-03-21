@@ -35,10 +35,13 @@ function App() {
 {/* край на работещия */}
 
       {/* <Stocks /> */}
-   
+
+ {/* start tab bus */}  
+ <div className="wrapper">
       <Tabs>
-{/* start tab bus */}
+
         <Tab label="Bus">
+       
           <div className="list">
 
             <div className="item">
@@ -51,7 +54,7 @@ function App() {
               <div className="address bus">8th Acw btwn 42nd St & 43rd, in front of..
      
                 <div className="row">
-                  <div className="col-md-3">
+                  <div className="col-md-12">
                     <div className="tour">
                       <button type="button" className="btn btn-sm btn-tour-1">Downtown Tour </button>
                       <button type="button" className="btn btn-sm btn-tour-2">Brooklyn Tour</button>
@@ -59,7 +62,7 @@ function App() {
                     </div>  
                   </div>
                   <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-12">
                       <div className="tour">
                         <button type="button" className="btn btn-sm btn-tour-3">Uptown & Harlem Tour </button>
                         <button type="button" className="btn btn-sm btn-tour-4">Night Tour</button>
@@ -142,6 +145,7 @@ function App() {
         </Tab>
       </Tabs>
     </div>
+  </div>
   );
 } 
 
