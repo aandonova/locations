@@ -24,7 +24,6 @@ input {
 }
 .input-field {
   margin: 0.5rem;
-  /* display: inline-block; */
   border: 1px solid #BFBFBF;
   color: #5A5A5A;
   padding-left: 2px;

@@ -12,7 +12,6 @@ function App() {
     <div className="App">
         <Header />
      
-    {/* работещ за record.json  */}
       {/* {
          Record.map( record => {
           return ( 
@@ -32,9 +31,6 @@ function App() {
           )
         })
       }  */}
-{/* край на работещия */}
-
-      {/* <Stocks /> */}
 
  {/* start tab bus */}  
  <div className="wrapper">
@@ -70,6 +66,7 @@ function App() {
                       </div>  
                   </div>
               </div>  
+
             </div>
 
             <div className="item">
@@ -148,6 +145,5 @@ function App() {
   </div>
   );
 } 
-
 
 export default App;
