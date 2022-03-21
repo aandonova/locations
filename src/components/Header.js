@@ -30,8 +30,7 @@ const Header = () => {
 
         <header className="header">
        
-        
-        
+
         
          </header>
 
@@ -40,26 +39,40 @@ const Header = () => {
         return (
         <div class="wrapper">
           <div className="box">
-            <div className="icons">
-                <i class="fa-solid fa-arrow-left"></i>
+            <div>
+              <i class="fa-solid fa-arrow-left"></i>
+              <div className="icons">
                 <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i> 
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-solid fa-circle-plus"></i> 
+              </div>
+              
+              <input
+                class="input-field"
+                name="location"
+                placeholder="Current Location"
+                value={x.location}
+                onChange={e => handleInputChange(e, i)}
+              />
+              <input
+                class="input-field"
+                name="location"
+                placeholder="Choise destination"
+                value={x.location}
+                onChange={e => handleInputChange(e, i)}
+              />
+             
             </div>
-            <input
-              name="location"
-              placeholder="Current Location"
-              value={x.location}
-              onChange={e => handleInputChange(e, i)}
-            />
             <div className="btn-box">
               {inputList.length !== 1 && <button
                 className="mr10"
                 onClick={() => handleRemoveClick(i)}><i class="fa-solid fa-circle-xmark"></i></button>}
-                <i class="fa-solid fa-circle-plus"></i> 
+                
               {inputList.length - 1 === i &&
   
-              <button onClick={handleAddClick}> Add destination</button>}
+              <button onClick={handleAddClick} class="input-field"> Add destination</button>}
             </div>
+           
           </div>
         </div>
         );

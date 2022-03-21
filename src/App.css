@@ -67,7 +67,27 @@ input {
   width: 250pt;
   height: 36pt;
 }
-i.fa-arrow {
+.icons .fa-arrow {
   width: 14.3pt;
   height: 12.7pt;
+  margin-right: 30px;
+  border: 1px solid red;
+  
+}
+
+.input-field {
+  margin: 0.5rem;
+  /* display: inline-block; */
+  border: 1px solid #BFBFBF;
+  color: #5A5A5A;
+  padding-left: 2px;
+}
+.icons {
+  display: inline-grid;
+  margin-top: 20px;
+  padding: 10px;
+}
+.icons .fa-solid {
+  color: #5A5A5A;
+  padding: 3px;
 }

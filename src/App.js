@@ -1,10 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import Record from './record.json';
 
 import { Stocks } from "./Stocks";
-import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
+
 import Tabs from "./components/Tabs";
 import Tab from "./components/Tab";
 import Header from "./components/Header";
@@ -13,33 +11,7 @@ function App() {
   return (
     <div className="App">
         <Header />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      {/* <div className="posts">
-        { 
-          Data & Data.map(post => {
-            return (
-              <div key= {post.id } className="box">
-                <h3> { post.address } </h3> 
-                <p> { post.address } </p>
-              </div>
-            )
-        })}
-      </div> */}
-
-
+     
     {/* работещ за record.json  */}
       {/* {
          Record.map( record => {
