@@ -44,7 +44,8 @@ const Header = () => {
               <div className="icons">
                 <i class="fa-solid fa-circle"></i>
                 <i class="fa-solid fa-ellipsis-vertical"></i>
-                <i class="fa-solid fa-circle-plus"></i> 
+                <i class="fa-solid fa-location-dot"></i>
+
               </div>
               
               <input
@@ -67,10 +68,12 @@ const Header = () => {
               {inputList.length !== 1 && <button
                 className="mr10"
                 onClick={() => handleRemoveClick(i)}><i class="fa-solid fa-circle-xmark"></i></button>}
-                
+                <i class="fa-solid fa-circle-plus"></i> 
               {inputList.length - 1 === i &&
-  
-              <button onClick={handleAddClick} class="input-field"> Add destination</button>}
+                
+              <button onClick={handleAddClick} class="input-field">
+                
+                 Add destination</button>}
             </div>
            
           </div>
