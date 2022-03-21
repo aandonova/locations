@@ -52,7 +52,8 @@ const Header = () => {
                   name="location"
                   placeholder="Choise destination"
                 />
-                <button type="button" className="input-field close" onClick={() => handleRemoveClick(i)}>
+                <button type="button" className="input-field" onClick={() => handleRemoveClick(i)}>
+                {/* <i class="fas fa-arrows-alt-v"></i> */}
                 <i class="far fa-times-circle"></i>
                 </button>
               </div>

@@ -1,7 +1,4 @@
 import './App.css';
-import Record from './record.json';
-
-import { Stocks } from "./Stocks";
 
 import Tabs from "./components/Tabs";
 import Tab from "./components/Tab";

@@ -63,7 +63,7 @@ input {
 .header-box .icon-back {
   padding-top: 24px;
 }
-button.input-field.close {
+button.input-field {
   background-color: #fff;
   border: none;
 }
